@@ -1,8 +1,22 @@
-import Head from 'next/head'
-import styles from './Home.module.css'
+//Styled-JSX
 
+function Heading(props){
+  return <div><h1>{props.heading}</h1>
+  <style jsx global>
+    {`
+      h1 {
+        color: red;
+      }
+    `}
+  </style>
+  </div>
+}
 export default function Home() {
   return (
-  <h1> Hellow world</h1>
+    <div>  
+      <Heading heading='Heading'/>
+      <h1>here</h1>
+    </div>
+   
   )
 }
