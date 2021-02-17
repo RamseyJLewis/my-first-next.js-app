@@ -1,22 +1,26 @@
 //Styled-JSX
 
-function Heading(props){
-  return <div><h1>{props.heading}</h1>
-  <style jsx global>
-    {`
-      h1 {
-        color: red;
+function Heading(props) {
+  const variables = Math.random() > 0.5 ? 'red' : 'blue'
+  return (
+    <div>
+      <h1>{props.heading}</h1>
+      <style jsx global>
+        {`
+          h1 {
+            color: ${variables};
       }
     `}
-  </style>
-  </div>
+      </style>
+    </div>
+  )
 }
+
 export default function Home() {
   return (
-    <div>  
-      <Heading heading='Heading'/>
-      <h1>here</h1>
+    <div>
+      <Heading heading='Headingg' />
+      <h1> Here</h1>
     </div>
-   
   )
 }
